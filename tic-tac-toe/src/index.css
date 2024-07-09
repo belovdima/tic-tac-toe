@@ -1,7 +1,60 @@
+@font-face {
+    font-family: "Oregano";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/Oregano-Regular.woff2");
+}
+
+:root {
+    --border-color: rgba(0, 0, 0, 0.51);
+}
+
+.game {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
 .area-row {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.sq-one {
+    border-right: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+}
+
+.sq-two {
+    border-bottom: 3px solid var(--border-color);
+}
+
+.sq-three {
+    border-bottom: 3px solid var(--border-color);
+    border-left: 3px solid var(--border-color);
+}
+
+.sq-four {
+    border-right: 3px solid var(--border-color);
+}
+
+.sq-six {
+    border-left: 3px solid var(--border-color);
+}
+
+.sq-seven {
+    border-top: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+}
+
+.sq-eight {
+    border-top: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+}
+
+.sq-nine {
+    border-top: 3px solid var(--border-color);
 }
 
 .game-sq {
@@ -10,7 +63,32 @@
     justify-content: center;
     width: 150px;
     height: 150px;
-    border: 1px solid rgb(0, 0, 0);
-    color: blue;
+    color: rgba(255, 123, 0, 0.639);
+    font-family: "Oregano";
     font-size: 150px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.winner-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-top: 25px;
+    font-family: "Oregano";
+    font-size: 40px;
+}
+
+.reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-top: 25px;
+    border-color: transparent;
+    border-radius: 25px;
+    color: rgba(255, 123, 0, 0.833);
+    background-color: rgba(97, 13, 150, 0.291);
+    font-size: 40px;
 }

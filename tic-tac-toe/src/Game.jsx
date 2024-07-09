@@ -67,25 +67,27 @@ function Game() {
 
   return (
     <>
-      <div className="game-area">
-        <div className="area-row sq-one-three">
-          <div className="game-sq sq-one" onClick={() => handleClick(cell1, setCell1)}>{cell1}</div>
-          <div className="game-sq sq-two" onClick={() => handleClick(cell2, setCell2)}>{cell2}</div>
-          <div className="game-sq sq-three" onClick={() => handleClick(cell3, setCell3)}>{cell3}</div>
+    <div className="game">
+        <div className="game-area">
+            <div className="area-row sq-one-three">
+            <div className="game-sq sq-one" onClick={() => handleClick(cell1, setCell1)}>{cell1}</div>
+            <div className="game-sq sq-two" onClick={() => handleClick(cell2, setCell2)}>{cell2}</div>
+            <div className="game-sq sq-three" onClick={() => handleClick(cell3, setCell3)}>{cell3}</div>
+            </div>
+            <div className="area-row sq-four-six">
+            <div className="game-sq sq-four" onClick={() => handleClick(cell4, setCell4)}>{cell4}</div>
+            <div className="game-sq sq-five" onClick={() => handleClick(cell5, setCell5)}>{cell5}</div>
+            <div className="game-sq sq-six" onClick={() => handleClick(cell6, setCell6)}>{cell6}</div> 
+            </div>
+            <div className="area-row sq-seven-nine">
+            <div className="game-sq sq-seven" onClick={() => handleClick(cell7, setCell7)}>{cell7}</div>
+            <div className="game-sq sq-eight" onClick={() => handleClick(cell8, setCell8)}>{cell8}</div>
+            <div className="game-sq sq-nine" onClick={() => handleClick(cell9, setCell9)}>{cell9}</div>
+            </div>
         </div>
-        <div className="area-row sq-four-six">
-          <div className="game-sq sq-four" onClick={() => handleClick(cell4, setCell4)}>{cell4}</div>
-          <div className="game-sq sq-five" onClick={() => handleClick(cell5, setCell5)}>{cell5}</div>
-          <div className="game-sq sq-six" onClick={() => handleClick(cell6, setCell6)}>{cell6}</div> 
-        </div>
-        <div className="area-row sq-seven-nine">
-          <div className="game-sq sq-seven" onClick={() => handleClick(cell7, setCell7)}>{cell7}</div>
-          <div className="game-sq sq-eight" onClick={() => handleClick(cell8, setCell8)}>{cell8}</div>
-          <div className="game-sq sq-nine" onClick={() => handleClick(cell9, setCell9)}>{cell9}</div>
-        </div>
+        {winner && <div className="winner-message">{winner} выиграл!</div>}
+        <button className="reset" onClick={handleReset}>Заново!</button>
       </div>
-      {winner && <div className="winner-message">{winner} выиграл!</div>}
-      <button className="reset" onClick={handleReset}>Reset</button>
     </>
   );
 }
