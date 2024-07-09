@@ -80,6 +80,16 @@
     font-size: 40px;
 }
 
+.draw-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-top: 25px;
+    font-family: "Oregano";
+    font-size: 40px;
+}
+
 .reset {
     display: flex;
     align-items: center;
